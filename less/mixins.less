@@ -1,1 +1,27 @@
 // Mixins in here
+
+.btn(@color, @bgcolor, @font-size:1.2em) {
+  width: 80%;
+  height: 30px;
+  border: 1px @color solid;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px;
+  background-color: @bgcolor;
+  color: @color;
+  font-size: @font-size;
+
+  &:hover {
+    color: yellow;
+  }
+}
+
+.img(@bdradius, @opacity:1) {
+  border-radius: @bdradius;
+  opacity: @opacity;
+
+  &:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    opacity: @opacity;
+  }
+}
